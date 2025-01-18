@@ -52,11 +52,4 @@ window.onload = () => {
     showSection('about');
 };
 
-// Prevenir el comportamiento por defecto de los enlaces
-document.querySelectorAll('a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const sectionId = this.getAttribute('href').substring(1); // Extraer el ID de la sección
-        showSection(sectionId); // Mostrar la sección correspondiente
-    });
-});
+

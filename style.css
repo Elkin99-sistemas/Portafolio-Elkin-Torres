@@ -59,6 +59,9 @@ nav ul li a {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.about-photo img[src="assets/Imagenes/Nick Foto.png"] {
     margin-left: 75px;
 }
 

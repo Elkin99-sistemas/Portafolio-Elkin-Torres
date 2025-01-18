@@ -55,11 +55,11 @@ nav ul li a {
 }
 
 .about-photo img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 20px;
+    margin-left: 75px;
 }
 
 .about-description {
@@ -133,4 +133,48 @@ footer {
 /* Asegúrate de no solapar el contenido principal */
 body {
     padding-bottom: 40px;  /* Ajusta el tamaño según el alto del footer */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para las filas de contacto */
+.contact-row {
+    display: flex;
+    flex-direction: row; /* Alinear horizontalmente */
+    align-items: center;
+    justify-content: space-around; /* Espacio alrededor para distribuir uniformemente */
+    margin-bottom: 20px;
+    margin-top: 100px; /* Añadir margen superior para crear espacio */
+
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column; /* Alinear verticalmente */
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.contact-item i {
+    font-size: 2rem;  /* Tamaño de los íconos */
+    color: #007bff;   /* Color de los íconos */
+}
+
+.contact-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-item .about-photo img {
+    width: 50px; /* Ajusta el ancho de la imagen */
+    height: 50px; /* Ajusta el alto de la imagen */
+    object-fit: cover;
 }

@@ -10,6 +10,11 @@ function showSection(sectionId) {
     const selectedSection = document.getElementById(sectionId);
     selectedSection.style.display = 'block';
 
+    // Desplazarse suavemente a la sección seleccionada
+    setTimeout(() => {
+        selectedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 200); // Retrasar el scroll ligeramente para asegurar que el contenido esté visible
+
     // Si se selecciona la sección de proyectos, cargar los repositorios de GitHub
     if (sectionId === 'projects') {
         loadGitHubProjects();
@@ -46,3 +51,12 @@ async function loadGitHubProjects() {
 window.onload = () => {
     showSection('about');
 };
+
+// Prevenir el comportamiento por defecto de los enlaces
+document.querySelectorAll('a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const sectionId = this.getAttribute('href').substring(1); // Extraer el ID de la sección
+        showSection(sectionId); // Mostrar la sección correspondiente
+    });
+});

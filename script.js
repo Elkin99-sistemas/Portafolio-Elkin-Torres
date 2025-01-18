@@ -52,4 +52,16 @@ window.onload = () => {
     showSection('about');
 };
 
+// Agregar eventos de clic a los enlaces de navegación
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const sectionId = link.getAttribute('href').substring(1);
+        showSection(sectionId);
+    });
+});
 
+// Agregar evento de clic al botón de descarga de CV
+document.getElementById('download-cv').addEventListener('click', () => {
+    window.open('assets/Imagenes/Nick CV.pdf', '_blank');
+});

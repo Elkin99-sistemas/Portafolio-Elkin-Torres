@@ -23,7 +23,7 @@ function showSection(sectionId) {
 
 // Función para cargar los repositorios de GitHub
 async function loadGitHubProjects() {
-    const response = await fetch('https://api.github.com/users/KriPyDragon/repos');
+    const response = await fetch('https://api.github.com/users/Elkin99-sistemas/repos');
     const projects = await response.json();
 
     const projectsList = document.getElementById('projects-list');
@@ -63,5 +63,5 @@ document.querySelectorAll('nav ul li a').forEach(link => {
 
 // Agregar evento de clic al botón de descarga de CV
 document.getElementById('download-cv').addEventListener('click', () => {
-    window.open('assets/Imagenes/Nick CV.pdf', '_blank');
+    window.open('assets/Imagenes/elkin cv.pdf', '_blank');
 });

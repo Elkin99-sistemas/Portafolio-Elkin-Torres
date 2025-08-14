@@ -1,9 +1,18 @@
+/* Importar tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fafafa;
+    background-image: url('assets/Imagenes/fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 60px; /* Evitar solapado con footer */
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -13,7 +22,7 @@ body {
 
 h1, h2 {
     text-align: center;
-    color: #333;
+    color: #0f0e0e;
 }
 
 /* Navegación */
@@ -30,7 +39,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: hsla(0, 25%, 98%, 0.863);
     font-size: 1.2rem;
     padding: 10px 20px;
     border-radius: 5px;
@@ -65,13 +74,17 @@ nav ul li a:active {
     max-width: 1200px;
     margin-top: 30px;
     width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 30px;
+    border-radius: 15px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .about-photo img {
-    width: 250px;
-    height: 250px;
+    width: 300px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .about-photo img[src="assets/Imagenes/Nick Foto.png"] {
@@ -79,10 +92,10 @@ nav ul li a:active {
 }
 
 .about-description {
-    max-width: 600px;
+    max-width: 700px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #333;
+    color: #fff;
 }
 
 #projects .container, #contact .container {
@@ -216,3 +229,14 @@ html {
     background-color: #004494;
     transform: scale(1);
 }
+ body {
+    background-image: url('assets/Imagenes/fondo2.jpg');
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
